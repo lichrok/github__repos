@@ -1,0 +1,18 @@
+@import '../../styles/utils/colors';
+
+.search {
+  border: 1px solid $gray-light;
+  border-radius: 4px;
+  padding: 8px 10px;
+  width: 100%;
+
+  &::placeholder {
+    font-style: italic;
+    font-weight: 100;
+  }
+
+  &:focus {
+    box-shadow: 0 0 3px $primary;
+    outline: none;
+  }
+}

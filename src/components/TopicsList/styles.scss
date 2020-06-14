@@ -1,0 +1,28 @@
+@import '../../styles/utils/colors';
+@import '../../styles/utils/mixins';
+@import '../../styles/utils/breakpoints';
+
+.topics-list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+
+  @media #{$tablet-portrait} {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  li {
+    background-color: rgba($primary, .1);
+    color: $primary;
+    padding: 5px 10px;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}

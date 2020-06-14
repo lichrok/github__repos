@@ -1,0 +1,46 @@
+@import '../../styles/utils/colors';
+
+.repository-item {
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $gray-light;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    color: $primary;
+    text-decoration: none;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+  }
+
+  &__footer-item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
+
+    img {
+      width: auto;
+      height: 20px;
+      margin-right: 5px;
+    }
+  }
+
+  &__icon {
+    height: 20px;
+    width: auto;
+    margin-right: 5px;
+  }
+
+  a {
+    word-break: break-all;
+  }
+}
