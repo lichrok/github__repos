@@ -1,7 +1,7 @@
 // @flow
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { addUrlProps, UrlQueryParamTypes } from 'react-url-query';
-import RepositoryList from '../components/RepositoryList';
+import RepositoryList from './RepositoryList';
 import SearchBar from '../components/SearchBar';
 import { HomeProps } from '../types';
 
@@ -14,18 +14,19 @@ function Home({ onChangeUrlQueryParams, search }: HomeProps) {
 		search: search || ''
 	}
 	const [searchTerm, setSearchTerm] = useState(defaultProps.search);
+	const onChangeHandle = useCallback((value) => {
+		setSearchTerm(value);
+		onChangeUrlQueryParams({
+			search: value
+		});
+	}, [searchTerm]);
 
 	return (
 		<>
 			<header className="header">
 				<div className="container">
 					<h1>Github search</h1>
-					<SearchBar value={searchTerm} onChange={(value) => {
-						setSearchTerm(value);
-						onChangeUrlQueryParams({
-							search: value
-						})
-					}}/>
+					<SearchBar value={searchTerm} onChange={onChangeHandle}/>
 				</div>
 			</header>
 			<main className="main">

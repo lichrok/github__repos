@@ -2,14 +2,14 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { useDebounce } from 'use-debounce';
-import { SEARCH_FOR_REPOS } from '../../api/queries';
-import RepositoryItem from '../RepositoryItem';
-import Loader from '../Loader';
-import { RepositoryListProps, SearchDataProps } from '../../types';
+import { SEARCH_FOR_REPOS } from '../api/queries';
+import RepositoryItem from '../components/RepositoryItem';
+import Loader from '../components/Loader';
+import { RepositoryListProps, SearchDataProps } from '../types';
 
 function RepositoryList({ searchTerm }: RepositoryListProps) {
 	const [debouncedSearchTerm] = useDebounce(searchTerm, 600);
-	const { data, loading, error }:SearchDataProps = useQuery(
+	const { data, loading, error }: SearchDataProps = useQuery(
 		SEARCH_FOR_REPOS,
 		{ variables: { search_term: debouncedSearchTerm } }
 	);

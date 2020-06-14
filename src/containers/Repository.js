@@ -7,7 +7,6 @@ import { RepositoryProps, RepositoryDataProps } from '../types';
 
 function Repository({ match }: RepositoryProps) {
 	const repoParams = match.params.repositoryParams.split('|');
-
 	const { data, loading, error }: RepositoryDataProps = useQuery(
 		GET_REPO_DATA,
 		{
