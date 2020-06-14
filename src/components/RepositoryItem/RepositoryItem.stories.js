@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 import StoryRouter from 'storybook-react-router';
 import RepositoryItem from './index';
 
-export const EXAMPLE_DATA = {
+const EXAMPLE_DATA = { // @TODO думаю подставные данные для сторис можно организовать по-другому, не хватило времени придумать.
 	node: {
 		name: 'Example',
 		descriptionHTML: 'Description',
@@ -11,7 +11,9 @@ export const EXAMPLE_DATA = {
 			login: 'Owner',
 			avatarUrl: 'https://api.adorable.io/avatars/234/abott@adorable.png'
 		},
-		stargazers: { totalCount: 1213 }
+		stargazers: { totalCount: 1213 },
+		primaryLanguage: {name: 'Javascript'},
+		forkCount: 1234
 	}
 }
 

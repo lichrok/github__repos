@@ -28,7 +28,11 @@ export type RepositoryItemProps = {
 				totalCount: {
 					totalStarCount: number
 				}
-			}
+			},
+			primaryLanguage: {
+				name: string
+			},
+			forkCount: number
 		}
 	}
 }

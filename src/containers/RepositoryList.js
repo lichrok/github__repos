@@ -7,8 +7,10 @@ import RepositoryItem from '../components/RepositoryItem';
 import Loader from '../components/Loader';
 import { RepositoryListProps, SearchDataProps } from '../types';
 
+const DEBOUNCE_DELAY = 800;
+
 function RepositoryList({ searchTerm }: RepositoryListProps) {
-	const [debouncedSearchTerm] = useDebounce(searchTerm, 600);
+	const [debouncedSearchTerm] = useDebounce(searchTerm, DEBOUNCE_DELAY);
 	const { data, loading, error }: SearchDataProps = useQuery(
 		SEARCH_FOR_REPOS,
 		{ variables: { search_term: debouncedSearchTerm } }

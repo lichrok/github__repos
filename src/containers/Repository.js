@@ -6,7 +6,7 @@ import RepositoryTemplate from '../components/Repository';
 import { RepositoryProps, RepositoryDataProps } from '../types';
 
 function Repository({ match }: RepositoryProps) {
-	const repoParams = match.params.repositoryParams.split('|');
+	const repoParams = match.params.repositoryParams.split('|'); // @TODO  т.к. для запроса необходимо 2 параметра, сделал такое разделение. Возможно есть другие варианты, нужно поискать.
 	const { data, loading, error }: RepositoryDataProps = useQuery(
 		GET_REPO_DATA,
 		{

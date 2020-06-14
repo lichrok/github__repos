@@ -17,6 +17,10 @@ export const SEARCH_FOR_REPOS = gql`
                             totalCount
                         },
                         descriptionHTML,
+                        primaryLanguage {
+                            name
+                        },
+                        forkCount
                     }
                 }
             }
