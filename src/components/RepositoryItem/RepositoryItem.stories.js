@@ -3,12 +3,7 @@ import {storiesOf} from '@storybook/react';
 import StoryRouter from 'storybook-react-router';
 import RepositoryItem from './index';
 
-export default {
-	component: RepositoryItem,
-	title: 'Repository list item'
-}
-
-export const exampleData = {
+export const EXAMPLE_DATA = {
 	node: {
 		name: 'Example',
 		descriptionHTML: 'Description',
@@ -16,10 +11,10 @@ export const exampleData = {
 			login: 'Owner',
 			avatarUrl: 'https://api.adorable.io/avatars/234/abott@adorable.png'
 		},
-		stargazers: { totalCount: 1 }
+		stargazers: { totalCount: 1213 }
 	}
 }
 
 storiesOf('Repository list item', module)
 	.addDecorator(StoryRouter())
-	.add('Example data', () => (<RepositoryItem repo={exampleData}/>));
+	.add('Example data', () => (<RepositoryItem repo={EXAMPLE_DATA}/>));

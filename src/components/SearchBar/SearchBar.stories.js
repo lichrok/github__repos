@@ -6,7 +6,7 @@ export default {
 	title: 'Search input'
 }
 
-export const Default = () => {
+export const DefaultInput = () => {
 	const [searchTerm, setSearchTerm] = useState('');
 
 	return (
