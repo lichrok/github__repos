@@ -1,4 +1,4 @@
-// @flow
+// @flow strict
 import React, { useState, useCallback } from 'react';
 import { addUrlProps, UrlQueryParamTypes } from 'react-url-query';
 import RepositoryList from './RepositoryList';

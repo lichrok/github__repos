@@ -1,3 +1,4 @@
+// @flow strict
 import React from 'react';
 import { TopicsList } from '../TopicsList';
 import { formatDate } from '../../utils';
