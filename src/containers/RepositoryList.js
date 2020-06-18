@@ -1,4 +1,4 @@
-// @flow
+// @flow strict
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { useDebounce } from 'use-debounce';

@@ -1,3 +1,4 @@
+// @flow strict
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { GET_REPO_DATA } from '../api/queries';

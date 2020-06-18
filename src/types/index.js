@@ -1,5 +1,6 @@
+// @flow strict
 export type HomeProps = {
-	onChangeUrlQueryParams: Function,
+	onChangeUrlQueryParams: ({search: string}) => {search: string},
 	search: string
 }
 
@@ -11,7 +12,7 @@ export type SearchDataProps = {
 	data: {
 		search: {
 			repositoryCount: number,
-			edges: Array
+			edges: Array<RepositoryItemProps>
 		}
 	},
 	loading: boolean,
@@ -47,7 +48,7 @@ export type RepositoryProps = {
 
 export type RepositoryDataProps = {
 	data: {
-		repository: Object
+		repository: RepositoryTemplateProps
 	},
 	loading: boolean,
 	error: string
@@ -67,7 +68,7 @@ export type RepositoryTemplateProps = {
 		url: string,
 		updatedAt: Date,
 		repositoryTopics: {
-			edges: Array
+			edges: Array<TopicsListProps>
 		}
 	}
 }

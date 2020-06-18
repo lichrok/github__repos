@@ -1,3 +1,4 @@
+// @flow strict
 import React from 'react';
 import { TopicsListProps } from '../../types';
 import './styles.scss';
